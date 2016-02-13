@@ -1,0 +1,189 @@
+.tableForum{
+    position:relative;
+    display:block;
+}
+
+.tableForum table{
+    width:100%;
+}
+
+.forum{
+    font-size:64px;
+    font-family:"Segoe UI", "Arial";
+    position: relative;
+    color: rgb(37, 73, 154);
+    display:block;
+    left:10px;
+}
+
+.tableForum table, th, td{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.tableForum tr:hover{
+    background-color:#EAEAEA;
+}
+
+.tableForum tr{
+    background-color:white;
+}
+
+.forumContent{
+    background-color:white;
+    position:relative;
+    width: 100%;
+    padding-bottom:100px;
+}
+
+.nameThread{
+    padding:10px;
+    width:60%;
+}
+
+.lastPost{
+    padding:10px;
+    width:25%;
+}
+
+.Views{
+    padding:10px;
+    width:15%;
+}
+
+.TitleThread{
+    color:rgb(37, 73, 154);
+    font-weight:bold;
+    font-size:22px;
+}
+
+.barTable{
+    position:relative;
+    width:100%;
+    height:50px;
+    display:block;
+}
+
+.content{
+    position:relative;
+    display:block;
+    top:75px;
+    left:30px;
+    width:80%;
+}
+
+.content a{
+    text-decoration: none;
+    color:rgb(37, 73, 154);
+}
+
+
+.btn:hover{
+    display:inline;
+    text-align:center;
+    padding:10px;
+    color:white;
+    font-family:"Segoe UI", Arial;
+    font-size:20px;
+    background-color:#2D8DAD;
+    border-radius:3px;
+    width:auto;
+    text-decoration: none;
+}
+
+.btn a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.btn a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.btn a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.btn a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.btn{
+    display:inline;
+    text-align:center;
+    padding:10px;
+    color:white;
+    font-family:"Segoe UI", Arial;
+    font-size:20px;
+    background-color:#2D1998;
+    border-radius:3px;
+    width:auto;
+    text-decoration: none;
+}
+
+.text{
+    font-family:Arial;
+    font-size:20px;
+}
+
+.ThName{
+    position:relative;
+    display:inline;
+    font-size:32px;
+    top:-5px;
+}
+
+.pages{
+    width:100%;
+    text-align:center;
+}
+
+.tablePosts table, th, td{
+    border:1px solid black;
+    border-collapse: collapse;
+    width:100%;
+}
+
+.tablePosts tr{
+    height:200px;
+}
+
+.postby{
+    width:20%;
+}
+
+.textpost{
+    width:100%;
+    height:100%;
+}
+
+.tdpost{
+    vertical-align: top;
+    height:100px;
+}
+
+.bottomPost{
+    position:relative;
+    display:block;
+    bottom:0px;
+    height:auto;
+}
+
+.topPost{
+    position:relative;
+    display:block;
+    text-align:justify;
+    padding:20px;
+    height:auto;
+}
+
+.floatRight{
+    float:right;
+}
+
+.floatLeft{
+    float:left;
+}

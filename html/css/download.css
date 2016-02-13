@@ -1,0 +1,77 @@
+.downcontent{
+    background-color:#D06911;
+    background-image:url("../resources/DownloadBkg.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.download-btn:hover{
+    display:inline;
+    text-align:center;
+    padding:10px;
+    color:white;
+    font-family:"Segoe UI", Arial;
+    font-size:20px;
+    background-color:#2D8DAD;
+    border-radius:3px;
+    width:300px;
+    text-decoration: none;
+}
+
+.download-btn a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.download-btn a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.download-btn a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.download-btn a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.download-btn{
+    display:inline;
+    text-align:center;
+    padding:10px;
+    color:white;
+    font-family:"Segoe UI", Arial;
+    font-size:20px;
+    background-color:#2D1998;
+    border-radius:3px;
+    width:300px;
+    text-decoration: none;
+}
+
+.downloadnow{
+    font-size:64px;
+    font-family:"Segoe UI", "Arial";
+    position: relative;
+    top: 100px;
+    left:20px;
+    color: rgb(37, 73, 154);
+    display:block;
+}
+
+.downloaddescription{
+    font-size:32px;
+    font-family:"Segoe UI", "Arial";
+    position: relative;
+    top: 150px;
+    left:50px;
+    color: rgb(60, 80, 160);
+    display:block;
+}
+
+.downloads{
+    position:relative;
+    top:300px;
+}
