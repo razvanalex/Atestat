@@ -1,0 +1,78 @@
+body{
+    overflow:hidden;
+}
+
+.BackGrd{
+    background-image:url(../resources/Home_4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+    height:120%;
+    width:120%;
+    transform:translate(-10%, -10%);
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.boxAcc{
+    font-family:Arial;
+    position:absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    width:400px;
+    height:550px;
+    background-color:rgba(59, 93, 71, 0.6);
+    transform: translate(-50%, -50%);
+}
+
+#titleBox{
+    text-align:center;
+    font-size:32px;
+    color:rgba(146, 160, 111, 1);;
+}
+
+#contBox{
+    position:relative;
+    font-size:18px;
+}
+
+.TextB {
+    position:relative;
+    margin:0px auto;
+    display: block;
+    border: 0;
+    width:80%;
+    background-color:rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size:16px;
+    color: rgba(255,255,255,0.9);
+    outline: none;
+}
+
+.TextB:focus {
+    outline: none;
+    border-color: rgba(0, 168, 255, 1);
+}
+
+.btn{
+    border:none;
+    background-color:red;
+    height:30px;
+    width:60%;
+    font-size:22px;
+    background-color:rgba(20, 165, 123, 0.7);
+}
+.btn:hover{
+    background-color:rgba(23, 224, 166, 0.7);
+}
