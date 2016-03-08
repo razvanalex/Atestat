@@ -39,7 +39,7 @@
         
        <div class='SignIn'>
             <div class="icon-close">
-                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
              </div>
          <?php
             if($user === "Sing In"){
@@ -85,7 +85,7 @@
                                     <div class='btn'><a href='forum/addThread.php'>Add Thread</a></div>
                                 </div>";
                                 
-                //ToDo: add Hour:Min to last post date; Design; Remove thread or post; SignIn bugs;
+                //ToDo: Design (+ About);
                 //Optional: LiveUpdate
                 ?>
             
@@ -115,7 +115,7 @@
                                     </td>
                                     <td class='lastPost'>
                                         <span>Last post by " . $data[$i]->lastPost . "</span><br>
-                                        <span> " . $data[$i]->When . "</span>
+                                        <span> " . $data[$i]->LastWhen . " at " . $data[$i]->Posts[$data[$i]->noPosts - 1]->HM ."</span>
                                     </td>
                                     <td class='Views'>
                                          <span>Posts: " . $data[$i]->noPosts . "</span><br>
@@ -143,7 +143,7 @@
 
         <div class="bottomTab">
             <hr>
-            <p>Copyright© 2015</p>
+            <p>Copyright© 2016</p>
         </div>  
 
         <script src="js/script.js"></script>

@@ -60,7 +60,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
     width: 100%;
     height: 75px;
 }
@@ -100,7 +100,7 @@ body {
     width:100%;
     margin-left: auto;
     margin-right: auto;
-    background-image:url("http://www.authentic-travel.ro/images/media/oferte/city-break-barcelona-vola/1352799402_817_0_5.jpg");
+    background-image:url(../resources/Home_5.png);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -120,7 +120,7 @@ body {
     width:100%;
     margin-left: auto;
     margin-right: auto;
-    background-image:url("https://benjaminenglishcorner.files.wordpress.com/2012/11/new_york_time_square_by_hairjay.jpg");
+    background-image:url(../resources/Home_6.png);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -149,7 +149,7 @@ body {
     width:100%;
     margin-left: auto;
     margin-right: auto;
-    background-image:url("https://farm8.staticflickr.com/7003/6672156239_6405cac8bf_o.jpg");
+    background-image:url(../resources/Home_7.png);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -260,7 +260,7 @@ body {
     top:0px;
     position: fixed;
     width: 285px;
-    z-index: 2;
+    z-index: 999;
 }
 
 .SignIn a{
@@ -339,13 +339,6 @@ body {
     border-color:#004AB8;
 }
 
-.invalid{
-    color:darkred;
-    font-family:Arial;   
-    font-size: 16px;
-    text-align:center;
-}
-
 .slider{
     position:relative;
     height: 600px;
@@ -359,20 +352,162 @@ body {
     width: 100%;
 }
 .first{
-    background-image:url(../resources/ScreenShot_48.png);
+    background-image:url(../resources/Home_1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    position:relative;
+    height:100%;
+    width:100%;
+    
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
 }
+
+.text_1{
+    position:relative;
+    bottom:500px;
+    left:10%;
+    width:80%;
+    z-index: 2;
+    word-wrap:break-word;
+    text-align:justify;
+}
+
 .second{
-    background-color:green;   
+    background-image:url(../resources/Home_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    height:100%;
+    width:100%;
+    
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
 }
+
+.text_2{
+    position:relative;
+    bottom:400px;
+    left:50px;
+    width:90%;
+    z-index: 2;
+    word-wrap:break-word;
+}
+
 .third{
-    background-color:yellow;
+    background-image:url(../resources/Home_10.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    height:100%;
+    width:100%;
+    
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
 }
+
+.text_3{
+    position:relative;
+    bottom:500px;
+    left:50px;
+    width:90%;
+    z-index: 2;
+    word-wrap:break-word;
+}
+
 .center{
     text-align:center;
 }
 .centerDIV{
     margin-left: auto;
     margin-right: auto;
+}
+
+.notvisible{
+    display:none;
+}
+
+#Text_T_1{
+    color:black;
+    font-size:42px;
+    text-align:center;
+}
+
+#Text_T_2{
+    color:black;
+    font-size:22px;
+    background-color:rgba(255, 255, 255, 0.4);
+}
+
+#Text_T_3{
+    color:black;
+    font-size:40px;
+    background-color:rgba(255, 255, 255, 0.3);
+}
+
+#Text_T_4{
+    color:black;
+    font-size:40px;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+.BG_About{
+    position:relative;
+    width:100%;
+    height:700px;
+    background-size:cover;
+    background-image:url(../resources/Home_3.png);
+}
+
+.About{
+    position:relative;
+    top:100px;
+    display:block;
+    height:80%;
+    background-repeat: no-repeat;
+}
+
+#AboutTextT{
+    font-size:40px;
+    font-family:Arial;
+    position:relative;
+    left:100px;
+}
+
+#AboutTextP{
+    font-size:22px;
+    width:90%;
+    text-align:justify;
+    background-color:rgba(255, 255, 255, 0.3);
+}
+
+.invalid{
+    color:rgba(150, 0, 0, 1);
+    font-family:Arial;   
+    font-size: 18px;
+    height:20px;
+    text-align:center;
 }

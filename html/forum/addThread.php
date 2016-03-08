@@ -3,10 +3,8 @@
     $user = "Sing In";
     if(isset($_SESSION['login_user']))
     {
-       /* if($username === "admin")
-            header("location:  userPages/adminPage.php");        
-        else header("location: userPages/userPage.php"); */
         $user = $_SESSION['login_user'];
+        $timezone = $_SESSION['time'];
     }
 ?>
 
@@ -20,7 +18,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>
     <body>
-        
         <div class="menu-bar">
             <div class="menu-bkg"></div>
             <ul>
@@ -33,14 +30,14 @@
                 <?php
                     if($user === "Sing In")
                         echo "<li class='ul-right SignIn-btn'><a href='#!'>Sign In</a></li>";
-                    else echo "<li class='ul-right'><a href='#!'>" . $user . "</a></li>";
+                    else echo "<li class='ul-right'><a href='#!'>" . $user . $timezone . "</a></li>";
                 ?>
             </ul>
         </div>
         
         <div class='SignIn'>
             <div class="icon-close">
-                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
              </div>
             <form class="LogLBL" action="" method="post"> 
                 <p><input type="text" name="Username" placeholder="Username" class="textbox"/></p>
@@ -61,9 +58,16 @@
                 <div class="forum">
                     <span><a href='../forum.php?pg=1'>Forum</a></span>
                 </div><br>
-                <form method="post" action= <?php echo "ThreadSystem.php?user=" . $user . "&type=Th"; ?> id="formTh">
+                <form method="post" action= '<?php echo "ThreadSystem.php?user=" . $user . "&type=Th"; ?>' id="formTh">
                     <span>Name of thread: </span><input type="text" name="name"/><br>
                 </form> 
+                <textarea class="notvisible" name="time" id="GMT" form="formTh"></textarea>
+                <?php echo "<?-- ----TimeZone---- -->"; ?>
+                <script type="text/javascript">
+                    var visitortime = new Date();
+                    var visitortimezone = -visitortime.getTimezoneOffset()/60;
+                    $("#GMT").text(visitortimezone);
+                </script>
                 <textarea rows="10" cols="100" name="comment" form="formTh" class="text"></textarea><br>
                 <input type="Submit" name="submit" value="Submit" form="formTh"/>
             </div>
@@ -71,7 +75,7 @@
         
         <div class="bottomTab">
             <hr>
-            <p>Copyright© 2015</p>
+            <p>Copyright© 2016</p>
         </div>  
 
         <script src="../js/script.js"></script>

@@ -9,7 +9,9 @@
         }
         else
         {
-            include('./ajax/InitialiseConnection.php');
+
+            if(!@include("./ajax/InitialiseConnection.php"))
+                include('../ajax/InitialiseConnection.php');
             
             // Define $username and $password
             $username=$_POST['Username'];

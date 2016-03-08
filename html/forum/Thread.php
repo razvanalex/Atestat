@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../css/forum.css" type="text/css"/>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>
-    <body>
+    <body onload=<?php echo "'getInfo(" . $_GET["th"] .", " . $_GET["pg"] . ");'" ?> >
         
         <div class="menu-bar">
             <div class="menu-bkg"></div>
@@ -40,7 +40,7 @@
         
         <div class='SignIn'>
             <div class="icon-close">
-                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
              </div>
          <?php
             if($user === "Sing In"){
@@ -109,21 +109,32 @@
                   //  else echo "<br>";
                 ?>
                 <div class="tablePosts">
-                    <table>
+                    <table id="tableP">
                         <?php
                             for ($i = $perPage * ($currentPage - 1); $i< $perPage * $currentPage; $i++) {
                                 if($data[$th]->Posts[$i] !== null){
-                                    echo "<tr>
+                                    echo "<tr class='trPost'>
                                         <td class='postby'>
-                                            <span>Posted by: " . $data[$th]->Posts[$i]->postBy . "</span>
+                                            <span>Posted by: " . $data[$th]->Posts[$i]->postBy . "</span><br>
+                                            <span>On: " . $data[$th]->Posts[$i]->When . "</span><br>
+                                            <span>At: " . $data[$th]->Posts[$i]->HM . "</span>
                                         </td>
                                         <td class='tdpost'>
                                             <div class='textpost'>
                                                 <div class='topPost'>
-                                                    <span>" . $data[$th]->Posts[$i]->postText ."</span><br>
+                                                    <span id='textPost" . ($i -  $perPage * ($currentPage - 1)) . "'>" . $data[$th]->Posts[$i]->postText ."</span>
+                                                    <textarea id='textarea" . ($i -  $perPage * ($currentPage - 1)) . "' class='txtarea notvisible'></textarea>
+                                                    <br>
+                                                </div>";
+                                    if($data[$th]->Posts[$i]->postBy === $user){
+                                        echo "  <div class='btnPost notvisible' id='editPost" . ($i -  $perPage * ($currentPage - 1) ). "'>
+                                                    <div class='btn'><a href ='#!'>Edit Post</a></div>
                                                 </div>
-                                                <div class='bottomPost'>
-                                                
+                                                <div class='btnPost notvisible' id='savePost" . ($i -  $perPage * ($currentPage - 1) ). "'>
+                                                    <div class='btn'><a href ='#!'>Save Post</a></div>
+                                                </div>";
+                                    }
+                                    echo "      <div class='bottomPost'>
                                                     <?-- ------Custom Bottom------ -->
                                                 </div>
                                             </div>
@@ -148,10 +159,11 @@
 
         <div class="bottomTab">
             <hr>
-            <p>Copyright© 2015</p>
+            <p>Copyright© 2016</p>
         </div>  
 
         <script src="../js/script.js"></script>
+        <script src="../js/Post.js"></script>
         <script src="../js/SmoothScroll.js"></script>
     </body>
 </html>

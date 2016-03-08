@@ -1,26 +1,40 @@
+<?php
+    include('login.php');
+    $user = "Sing In";
+    if(isset($_SESSION['login_user']))
+        $user = $_SESSION['login_user'];
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>New account</title>
-         <link rel="stylesheet" href="../css/main.css" type="text/css"/>
+        <title>Create new account</title>
+        <link rel="stylesheet" href="../css/main.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/createAcc.css" type="text/css"/>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>
     <body>
-        <div>
-            <h1>Create Account</h1>
+        
+        <div class="BackGrd"></div>
+        <div class="boxAcc">
+            <div id="titleBox">
+                <p>Create Account</p>
+            </div>
+            <div id="contBox">
+                <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+                    <p><input type="text" name="<?php echo "FirstName"; ?>" placeholder="First Name:" class="TextB"/></p>
+                    <p><input type="text" name="LastName" placeholder="Last Name:" class="TextB"/></p>
+                    <p><input type="text" name="Username" placeholder="Username:" class="TextB"/></p>
+                    <p><input type="text" name="Email" placeholder="Email:" class="TextB"/></p>
+                    <p><input type="text" name="DateOfBirth" placeholder="Date of Birth:" class="TextB"/></p>
+                    <p><input type="password" name="Password" placeholder="Password:" class="TextB"/></p>
+                    <p><input type="password" name="RePassword" placeholder="Repeat Password:" class="TextB"/></p>
+                    <center><span class="invalid"></span></center>
+                    <p><center><input type="submit" value="Create Account" onclick="location.href='index.php';" class="btn"/></center></p>
+                </form>
+            </div>
         </div>
         
-        <div>
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-                <p>First Name: <input type="text" name="<?php echo "FirstName"; ?>" placeholder="First Name"/></p>
-                <p>Last Name: <input type="text" name="LastName" placeholder="Last Name"/></p>
-                <p>Username: <input type="text" name="Username" placeholder="Username"/></p>
-                <p>Email: <input type="text" name="Email" placeholder="Email"/></p>
-                <p>Date of Birth: <input type="text" name="DateOfBirth" placeholder="Date of Birth"/></p>
-                <p>Password: <input type="text" name="Password" placeholder="Password"/></p>
-                <p>Repeat Password: <input type="text" name="RePassword" placeholder="Repeat Password"/></p>
-                <p><input type="submit" value="Create Account" onclick="location.href='index.php';"/></p>
-            </form>
-        </div>
         
         <?php
             include '../ajax/InitialiseConnection.php';
@@ -56,7 +70,7 @@
                         $error = "Username exists!";
                 }
                 
-                if($error == "")
+                if($error === "")
                 {
                     $hashed_password = password_hash($Password, PASSWORD_BCRYPT, ['cost' => 15]);
                     $sql = "INSERT INTO Users (Username, FirstName, LastName, Email, DateOfBirth, Password)
@@ -85,8 +99,13 @@
                         }
                     }
                 }
-                
                 $conn->close();
+                
+                if($error === ""){
+                    if($user === "admin")
+                        header("location: ../userPages/adminPage.php");        
+                    else header("location: ../index.php");
+                }
             }
             
             function test_input($data) 
@@ -96,9 +115,11 @@
                $data = htmlspecialchars($data);
                return $data;
             }
-
+        
         ?> 
-        <span class="invalid"><?php echo $error; ?></span><br>
-        <button onclick="location.href='../index.php';">Go back</button>
+        <span class="textInv notvisible"><?php echo $error . "&nbsp;"; ?></span><br>
+        <script type="text/javascript">
+            $(".invalid").text($(".textInv").text());
+        </script>
     </body>
 </html>

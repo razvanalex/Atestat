@@ -25,21 +25,42 @@
             <ul>
                 <li class="ul-left"><a href="index.php">Home</a></li>
                 <li class="ul-left"><a href="download.php">Download</a></li>
-                <li class="ul-left selected"><a href="forum.php?pg=1">Forum</a></li>
-                <li class="ul-left"><a href="about.php">About Us</a></li>
+                <li class="ul-left"><a href="forum.php?pg=1">Forum</a></li>
+                <li class="ul-left selected"><a href="about.php">About Us</a></li>
             </ul>
             <ul>
                 <?php
                     if($user === "Sing In")
                         echo "<li class='ul-right SignIn-btn'><a href='#!'>Sign In</a></li>";
-                    else echo "<li class='ul-right'><a href='#!'>" . $user . "</a></li>";
+                    else echo "<li class='ul-right SignIn-btn'><a href='#!'>" . $user . "</a></li>";
                 ?>
             </ul>
         </div>
         
+        <div class="BG_About">
+            <div class="About">
+              <span id="AboutTextT">About Us</span>
+              <center>
+                    <p id="AboutTextP">
+                        This engine is made and maintained by @razvanalex who is the main developer. 
+                        He used a lot of projects and merge them into a complex engine which will be updated constantly.
+                        One of the main objectiv is to do coding much easier. 
+                        Many thanks for @jcoluna for his CSM algorithm (cascaded shadow mapping) and light shaft effect,
+                        and for other devs for their uploaded projects on the internet.
+                    </p>
+                </center>
+            </div>
+        </div>
+        
+        <div class="bottomTab">
+            <hr>
+            <p>Copyright© 2016</p>
+        </div>  
+        
+        
         <div class='SignIn'>
             <div class="icon-close">
-                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
              </div>
             <form class="LogLBL" action="" method="post"> 
                 <p><input type="text" name="Username" placeholder="Username" class="textbox"/></p>
@@ -54,18 +75,6 @@
                 <p><a href="logon/createAccount.php">Create an account</a></p>
             </div>
         </div>
-      
-      <div>
-          <span>About Us</span>
-          <p>
-              This engine is made and mentained by @razvanalex who is the main developer. He used a lot of projects and merge them into a complex engine which will be updated constantly. One of the main ojbectiv is to do codding much easy. Many thanks for @jcoluna for his CSM algorithm (cascaded shadow mapping) and for other devs for their uploaded projects on the internet.
-          </p>
-      </div>
-
-        <div class="bottomTab">
-            <hr>
-            <p>Copyright© 2015</p>
-        </div>  
 
         <script src="js/script.js"></script>
         <script src="js/SmoothScroll.js"></script>

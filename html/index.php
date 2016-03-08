@@ -16,6 +16,7 @@
         <meta charset="utf-8" />
         <title>Home Page</title>
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
+        <link rel="stylesheet" href="css/download.css" type="text/css"/>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>
     <body>
@@ -36,22 +37,37 @@
             </ul>
         </div>
         
-        <div class="tab first">
-            
+        
+        <div class ="tab">
+            <div class="first"></div>
+            <div class="text_1">
+                <center><span id="Text_T_1">Want to create your own game easier and faster? <br> Try XNAEnvironment!</span></center></center><br>
+                <span id="Text_T_2">XNAEnvironment is a powerful tool designed for game developers, which allows to create your dreamed game world. 
+                You don't have to create your own graphics engine.
+                You can generate random worlds by using your resources.
+                Try yourself this framework, it's completely free. 
+                All that you need is Visual C# 2010 or later and Microsoft XNA 4.0 for C#. 
+                Free resources may be found out on our community.</span>
+            </div>
         </div>
-                
-        <div class="tab second">
-            
+        
+        <div class="tab">
+            <div class="second"></div>
+            <div class="text_2">
+                <center><span id="Text_T_3">Experience some cool stuff like shadows, water shader, billboards system, light shaft and so on!</span></center>
+                <span></span>
+            </div>
         </div>
+        
         
         <div class="slider">
             <div class="slide active-slide">
                 <div class="bg01">
                     <div class="title">
-                        <p><h1>Barcelona</h1></p>
+                        <p><h1>Realtime environment</h1></p>
                     </div>
                      <div class="description">
-                        <p>Find one of beautiful places in the world!<br>For more details click here.</p>
+                        <p>Make an open world game with weather features and day-night cycles.</p>
                     </div>
                 </div>
             </div>
@@ -59,10 +75,10 @@
             <div class="slide">
                 <div class="bg02">
                     <div class="title2">
-                        <p><h1>New York</h1></p>
+                        <p><h1>Cool underwater</h1></p>
                     </div>
                      <div class="description2">
-                        <p>Stay in a large city like New York<br>and feel good in America!<br>For more details click here.</p>
+                        <p>This framework has partial support for underwater world. You can add fishes, vegetation and some rocks and you have got an awesome environment!</p>
                     </div>
                 </div>
             </div>
@@ -70,10 +86,10 @@
             <div class="slide">
                 <div class="bg03">
                     <div class="title3">
-                        <p><h1>Paris</h1></p>
+                        <p><h1>Light scattering</h1></p>
                     </div>
                      <div class="description3">
-                        <p>Do you want a wanderful place where to stay?<br>Paris could be your right place.</p>
+                        <p>Day-night cycle with light scattering and lens flare do your world much more realistic. Also the reflection of sun and moon looks wonderful!</p>
                     </div>
                 </div>
             </div>
@@ -81,10 +97,10 @@
             <div class="slider-nav">
                 <div class="arrows">
                     <div class="arrow-prev">
-                        <a href="#!"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+                        <a href="#!"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
                     </div>
                     <div class="arrow-next">
-                      <a href="#!"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+                      <a href="#!"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
                     </div> 
                 </div>
                 <div class="slider-dots">
@@ -96,10 +112,27 @@
                 </div>
             </div> 
         </div>
+
+
+        <div class="tab">
+            <div class="third"></div>
+            <div class="text_3">
+                <center>
+                    <span id="Text_T_4">Make your dreams become true! Don't hesitate! Try it right now!<br> It's Free!</span><br><br><br>
+                    <div class="download-btn"><a href="download.php">Go to download page</a></div>
+                </center>
+            </div>
+        </div>
+        
+        <div class="bottomTab">
+            <hr>
+            <p>Copyright© 2016</p>
+        </div>
+        
         
        <div class='SignIn'>
             <div class="icon-close">
-                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
              </div>
          <?php
             if($user === "Sing In"){
@@ -131,16 +164,6 @@
                 }
             }
         ?>
-        
-        </div>
-        
-        <div class="tab third">
-            
-        </div>
-        <div class="bottomTab">
-            <hr>
-            <p>Copyright© 2015</p>
-        </div>  
 
         <script src="js/script.js"></script>
         <script src="js/SmoothScroll.js"></script>
