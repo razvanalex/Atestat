@@ -61,7 +61,13 @@
                     $error = "Required fields are empty!";
                 if($Password != $REPassword)  
                     $error = "Passwords don't match!";
-             
+                
+                $newformat = date('d.m.Y', strtotime($DateOfBirth));
+                if($DateOfBirth !== $newformat)  {
+                    $error = "Wrong date format!";
+                    $DateOfBirth = date('Y.m.d', $newformat);
+                }
+                
                 $sql = "SELECT Username FROM Users";
                 $result = $conn->query($sql);
                 while ($db_field = $result->fetch_assoc()) 

@@ -20,6 +20,19 @@ var main = function(){
             right:"-285px"
         }, 1000);
     });
+    
+    $('.FgPss-btn').click(function() {
+        $('.FgPss').animate({
+            right:"0px"
+        }, 1000);
+    });
+    
+    $('.FgPss-close').click(function() {
+        $('.FgPss').animate({
+            right:"-285px"
+        }, 1000);
+    });
+    
     setInterval(timer, 1000);
 };
 

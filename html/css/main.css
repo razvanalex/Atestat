@@ -272,6 +272,20 @@ body {
     color: white;
 } 
 
+.FgPss{
+    background: gray;
+    right: -285px;
+    height: 100%;
+    top:0px;
+    position: fixed;
+    width: 285px;
+    z-index: 999;
+}
+
+.FgPss{
+    
+}
+
 .FgtPass{
     text-align:center;
     margin-left: auto;
@@ -293,6 +307,14 @@ body {
 }
 
 .LogLBL{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align:center;
+    padding-top:200px;
+}
+
+.FgPass{
     margin-left: auto;
     margin-right: auto;
     width: 100%;

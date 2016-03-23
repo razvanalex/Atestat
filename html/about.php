@@ -58,22 +58,53 @@
         </div>  
         
         
-        <div class='SignIn'>
+             <div class='SignIn'>
             <div class="icon-close">
                 <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
              </div>
-            <form class="LogLBL" action="" method="post"> 
+         <?php
+            if($user === "Sing In"){
+                echo '
+                    <form class="LogLBL" action="" method="post"> 
+                        <p><input type="text" name="Username" placeholder="Username" class="textbox"/></p>
+                        <p><input type="password" name="Password" placeholder="Password" class="textbox"/></p>
+                        <p><input type="Submit" name="Submit" value="Sign in" class="button" /></p>
+                    </form>
+                    
+                    <div class="FgtPass">
+                        <span class="invalid"><p>' . $error . '</p></span>
+                        <p class="FgPss-btn"><a href="#!">Forgot your password?</a></p>
+                        <p class="FgPss-btn"><a href="#">Cannot access your accout?</a></p>
+                        <p><a href="logon/createAccount.php">Create an account</a></p>
+                    </div>';
+            }
+            else {
+                echo "
+                    <div class='LogLBL'>
+                        <div class='button centerDIV' onclick=" . "location.href='./logon/logout.php';" . ">Sign Out</div><br>
+                    </div>
+                    ";
+                if($user === "admin") {
+                      echo "<div class='button centerDIV' onclick=" . "location.href='./userPages/adminPage.php';" . ">Admin Page</div>";  
+                }
+                else {
+                    echo "<div class='button centerDIV' onclick=" . "location.href='./userPages/userPage.php';" . ">" . $user . " Page</div>";
+                }
+            }
+        ?>
+        </div>
+        
+        <div class="FgPss">
+            <div class="FgPss-close">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+            </div>
+            
+            <form class="FgPass" action="logon/login.php?Submit=Lost" method="post"> 
+                <p>Enter your username:</p>
                 <p><input type="text" name="Username" placeholder="Username" class="textbox"/></p>
-                <p><input type="password" name="Password" placeholder="Password" class="textbox"/></p>
-                <p><input type="Submit" name="Submit" value="Sign in" class="button" /></p>
+                <p><input type="Submit" name="Submit" value="Submit" class="button" /></p>
             </form>
             
-            <div class="FgtPass">
-                <span class="invalid"><?php echo "<p>" . $error . "</p>"; ?></span>
-                <p><a href="#">Forgot your password?</a></p>
-                <p><a href="#">Cannot access your accout?</a></p>
-                <p><a href="logon/createAccount.php">Create an account</a></p>
-            </div>
         </div>
 
         <script src="js/script.js"></script>

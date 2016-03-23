@@ -44,4 +44,25 @@
             $conn->close(); // Closing Connection
         }
     }
+    
+    class PassProblem { 
+        public $Username;
+        public function __construct($Username) {
+            $this->Username = $Username;
+        }
+    }
+    
+    if($_GET["Submit"] === "Lost")
+    {
+        $user = $_POST["Username"];
+        $json = file_get_contents("../json/User_Pass_Req.json");
+        $data = json_decode($json, true);
+        $newData = new PassProblem($user);
+        
+        array_push($data, $newData);
+        file_put_contents('../json/User_Pass_Req.json', json_encode($data));
+        
+        header('Location: ../index.php');
+    }
+    
 ?>

@@ -38,9 +38,9 @@
             </ul>
         </div>
         
-        <div class='SignIn'>
+       <div class='SignIn'>
             <div class="icon-close">
-                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
              </div>
          <?php
             if($user === "Sing In"){
@@ -53,8 +53,8 @@
                     
                     <div class="FgtPass">
                         <span class="invalid"><p>' . $error . '</p></span>
-                        <p><a href="#">Forgot your password?</a></p>
-                        <p><a href="#">Cannot access your accout?</a></p>
+                        <p class="FgPss-btn"><a href="#!">Forgot your password?</a></p>
+                        <p class="FgPss-btn"><a href="#">Cannot access your accout?</a></p>
                         <p><a href="logon/createAccount.php">Create an account</a></p>
                     </div>';
             }
@@ -72,7 +72,19 @@
                 }
             }
         ?>
+        </div>
         
+        <div class="FgPss">
+            <div class="FgPss-close">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+            </div>
+            
+            <form class="FgPass" action="logon/login.php?Submit=Lost" method="post"> 
+                <p>Enter your username:</p>
+                <p><input type="text" name="Username" placeholder="Username" class="textbox"/></p>
+                <p><input type="Submit" name="Submit" value="Submit" class="button" /></p>
+            </form>
+            
         </div>
       
         <div class="tab downcontent ">
@@ -84,7 +96,7 @@
             <div class="downloads center">
                 <ul>
                     <li class="download-btn"><a href="https://github.com/razvanalex/XNAEnvironment">Get the source from GitHub</a></li>
-                    <li class="download-btn"><a href="#">Try demo</a></li>
+                    <li class="download-btn"><a href="https://github.com/razvanalex/XNAEnvironment/releases/download/v0.1-alpha/publish.rar">Try demo</a></li>
                 </ul>
             </div>
         </div>

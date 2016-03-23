@@ -74,6 +74,19 @@
         
         </div>
       
+        <div class="FgPss">
+            <div class="FgPss-close">
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+            </div>
+            
+            <form class="FgPass" action="logon/login.php?Submit=Lost" method="post"> 
+                <p>Enter your username:</p>
+                <p><input type="text" name="Username" placeholder="Username" class="textbox"/></p>
+                <p><input type="Submit" name="Submit" value="Submit" class="button" /></p>
+            </form>
+            
+         </div>
+      
         <div class="tab forumContent">
             <div class="content"> 
                 <?php 

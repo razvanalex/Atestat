@@ -125,6 +125,8 @@
 		
 		<button onclick="location.href='../logon/logout.php';">SignOut</button>
 		<button onclick="location.href='../logon/createAccount.php';">Add account</button>
+		<button onclick="location.href='../logon/Problems.php';">Login Problems</button>
+		
 		<script type="text/javascript" src="../js/UI.js"></script>
 	</body>
 </html>
