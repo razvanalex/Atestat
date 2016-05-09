@@ -21,7 +21,7 @@
             $username = stripslashes($username);
             
             // SQL query to fetch information of registerd users and finds user match.
-            $sql = "SELECT Username, Password FROM Users";
+            $sql = "SELECT Username, Password FROM users";
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0)

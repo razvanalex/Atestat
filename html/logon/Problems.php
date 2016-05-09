@@ -5,7 +5,7 @@
 	$username = $_SESSION['login_user'];
 	
 	// SQL Query To Fetch Complete Information Of User
-	$sql = "SELECT Username FROM Users WHERE Username='$username'";
+	$sql = "SELECT Username FROM users WHERE Username='$username'";
 	
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();

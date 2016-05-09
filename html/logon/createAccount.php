@@ -41,7 +41,7 @@
             
             /*for($i=1;$i<=100; $i++)
             {
-                $sql = "INSERT INTO Users (Username, FirstName, LastName, Email, DateOfBirth, Password)
+                $sql = "INSERT INTO users (Username, FirstName, LastName, Email, DateOfBirth, Password)
                 VALUES('USER$i', 'USER$i', 'USER$i', 'USER$i@sample.com', '', 'USER$i')";
                 $conn->query($sql);
             }*/
@@ -68,7 +68,7 @@
                     $DateOfBirth = date('Y.m.d', $newformat);
                 }
                 
-                $sql = "SELECT Username FROM Users";
+                $sql = "SELECT Username FROM users";
                 $result = $conn->query($sql);
                 while ($db_field = $result->fetch_assoc()) 
                 {
@@ -79,7 +79,7 @@
                 if($error === "")
                 {
                     $hashed_password = password_hash($Password, PASSWORD_BCRYPT, ['cost' => 15]);
-                    $sql = "INSERT INTO Users (Username, FirstName, LastName, Email, DateOfBirth, Password)
+                    $sql = "INSERT INTO users (Username, FirstName, LastName, Email, DateOfBirth, Password)
                     VALUES('$Username', '$FirstName', '$LastName', '$Email', '$DateOfBirth', '$hashed_password')";
                     
                     if ($conn->query($sql) === TRUE) {
@@ -88,7 +88,7 @@
                     else echo "Error: " . $sql . "<br>" . $conn->error;
                 }  
              
-                $sql = "SELECT ID, Username FROM Users";
+                $sql = "SELECT ID, Username FROM users";
                 $result = $conn->query($sql);
                
                 if ($result->num_rows > 0) 
@@ -100,7 +100,7 @@
                         $username = $db_field['Username'];
                         if($db_field['ID'] != $ID)
                         {
-                            $sql1 = "Update Users SET ID = '$ID' WHERE Username='$username'";
+                            $sql1 = "Update users SET ID = '$ID' WHERE Username='$username'";
                             $conn->query($sql1);
                         }
                     }
